@@ -31,14 +31,14 @@
 
     <link rel="stylesheet" href="{{site.baseurl}}/resources/css/main.css">
   </head>
-  <body class="hold-transition skin-red sidebar-mini">
+  <body class="hold-transition skin-red sidebar-mini fixed">
     <div class="wrapper">
 
       <header class="main-header">
         <!-- Logo -->
         <a href="/" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><img alt="Scala on Android" src="{{site.baseurl}}/resources/img/android.svg"  height="34" width="30"></img></span>
+          <span class="logo-mini"><img alt="Scala on Android" src="{{site.baseurl}}/resources/img/android.svg" height="34" width="30"></img></span>
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><img alt="Scala on Android" src="{{site.baseurl}}/resources/img/android.svg" height="34" width="28" class="sidebar-logo"></img> <b class="bolder">Scala</b><span class="thinner">on</span><b class="bolder">Android</b></span>
         </a>
@@ -48,6 +48,12 @@
           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Toggle navigation</span>
           </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li data-toggle="tooltip" data-placement="bottom" title="Scala on the JVM"><a href="http://get-scala.org"><img src="{{site.baseurl}}/resources/img/jvm.svg" height="50px"></img></a></li>
+              <li data-toggle="tooltip" data-placement="bottom" title="Scala.js – Scala in the browser"><a href="https://scala-js.org"><img src="{{site.baseurl}}/resources/img/js.svg" height="50px" style="padding:8px;"></img></a></li>
+            </ul>
+          </div>
         </nav>
       </header>
       <!-- Content Header (Page header) -->
