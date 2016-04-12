@@ -1,0 +1,41 @@
+{{ partial "header.html" . }}
+
+{{ partial "sidebar.html" . }}
+
+<div class="content body">
+
+  <div class="box box-primary">
+
+    <div class="box-header with-border">
+      <h3 id="title" class="box-title">{{ .Title }}</h3>
+    </div>
+
+    <div class="box-body no-padding">
+
+      <div class="table-responsive mailbox-messages">
+
+          <table class="table table-hover table-striped">
+
+            <tbody>
+              <tr>
+                <th>Version</th>
+                <th>Date</th>
+              </tr>
+              {{ range .Data.Pages }}
+                   <tr class="mailbox-subject clickable-row" data-href='{{.Permalink}}'>
+                     <td>{{ .Title }} </td>
+                     <td>{{ .Date }}</td>
+                   </tr>
+
+              {{ end }}
+
+            </tbody>
+
+          </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{ partial "footer.html" . }}

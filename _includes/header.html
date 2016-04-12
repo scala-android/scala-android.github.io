@@ -1,22 +1,53 @@
-<header class="HolyGrail-header hero">
-  <div class="hero-header">
-    <a class="site-title" href="{{ site.baseurl }}/">Scala on Android</a>
-  </div>
-  <div class="hero-content">
-    <a class="site-logo" href="{{ site.baseurl }}/">Scala on Android Logo</a>
-  </div>
-  <div class="hero-footer">
-    <nav class="tabs is-boxed">
-      <div class="container">
-        <ul>
-          <li class="is-active"><a href="#">Introduction</a></li>
-          <li><a href="#">Getting Started</a></li>
-          <li><a href="#">Overview</a></li>
-          <li><a href="#">Tutorial</a></li>
-          <li><a href="#">Contribute</a></li>
-          <li><a href="#">Community</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</header>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ .Site.Title }}</title>
+    <link rel="shortcut icon" href="{{site.baseurl}}/resources/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{site.baseurl}}/resources/img/favicon.ico" type="image/x-icon">
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{site.baseurl}}/resources/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="{{site.baseurl}}/resources/css/skins/all-skins.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="{{site.baseurl}}/resources/css/main.css">
+  </head>
+  <body class="hold-transition skin-red sidebar-mini">
+    <div class="wrapper">
+
+      <header class="main-header">
+        <!-- Logo -->
+        <a href="/" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><img alt="Scala on Android" src="{{site.baseurl}}/resources/img/android.svg"  height="34" width="30"></img></span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><img alt="Scala on Android" src="{{site.baseurl}}/resources/img/android.svg" height="34" width="28" class="sidebar-logo"></img> <b class="bolder">Scala</b><span class="thinner">on</span><b class="bolder">Android</b></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+        </nav>
+      </header>
+      <!-- Content Header (Page header) -->

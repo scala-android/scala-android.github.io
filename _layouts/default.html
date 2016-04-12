@@ -1,26 +1,9 @@
-<!DOCTYPE html>
-<html>
+ {% include header.html %}
 
-  {% include head.html %}
+ {% include sidebar.html %}
 
-  <body class="HolyGrail">
+<div class="content body">
 
-    {% include header.html %}
-
-    <div class="HolyGrail-body">
-      <main class="HolyGrail-content">
-        {{ content }}
-      </main>
-      <nav class="HolyGrail-nav">
-        
-      </nav>
-      <aside class="HolyGrail-ads">
-        
-      </aside>
-    </div>
-
-    {% include footer.html %}
-
-  </body>
-
-</html>
+{{ content }}
+</div>
+ {% include footer.html %}

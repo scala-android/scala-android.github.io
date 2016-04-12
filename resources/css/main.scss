@@ -1,0 +1,43 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import 'fonts';
+
+// Our variables
+$base-font-family: Montserrat, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+body {
+  font-family: $base-font-family;
+  font-size: 12px;
+  font-weight: $base-font-weight;
+}
+
+.main-header .logo {
+  font-family: $base-font-family;
+  padding: 0 10px;
+}
+
+.logo-lg {
+  margin-right: 5px;
+}
+
+.sidebar-logo {
+  margin-right: 5px;
+}
+
+b, strong {
+  font-weight: 500;
+}
+
+.bolder {
+  font-weight: 500;
+}
+.thinner {
+  font-weight: 300;
+}

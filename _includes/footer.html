@@ -1,5 +1,41 @@
-<footer class="HolyGrail-footer footer">
-  <div class="container">
-    <p>All trademarks are the properties of their respective owners and are used for purposes of identification only.</p>
+</div><!-- /.content-wrapper -->
+<footer class="main-footer">
+  <div class="pull-right hidden-xs">
+      All trademarks are the properties of their respective owners and are used for purposes of identification only.
   </div>
+  <strong>scala-android.org</strong>
 </footer>
+
+<!-- Add the sidebar's background. This div must be placed
+     immediately after the control sidebar -->
+<div class="control-sidebar-bg"></div>
+</div><!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+$.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- Slimscroll -->
+<script src="{{site.baseurl}}/resources/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="{{site.baseurl}}/resources/plugins/fastclick/fastclick.min.js"></script>
+<!-- AdminLTE App -->
+<script src="{{site.baseurl}}/resources/js/app.min.js"></script>
+
+<script>
+$(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
+</script>
+</script>
+</body>
+</html>

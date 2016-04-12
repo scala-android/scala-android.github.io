@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+{{ partial "sidebar.html" . }}
+
+<section class="content-header">
+<h1>{{ .Title }}</h1>
+</section>
+
+<div class="content body">
+
+{{ .Content }}
+</div>
+{{ partial "footer" . }}
