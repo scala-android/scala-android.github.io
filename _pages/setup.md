@@ -1,15 +1,9 @@
 ---
 date: "2016-01-31T02:38:23+09:00"
-title: "Setting up enviroment"
+title: "Setup"
 layout: page
 permalink: /setup/
 ---
-
-
-There are two ways of working with android-sdk-plugin:
-
-1. Creating project with `gen-android` task
-2. Using `android gradle build` plugin which can import existing gradle project for you
 
 ## Prerequisites
 
@@ -17,88 +11,116 @@ There are two ways of working with android-sdk-plugin:
 2. `ANDROID_HOME` variable must be set and pointing to your android sdk directory.
 3. Plugin also requires `sbt`.
 
-### Installing sbt on Mac OS X with brew:
-```bash
-$ brew install sbt
-```
-
-### Installing sbt on Ubuntu / Debian:
-
-```bash
+<div class="nav-tabs-custom">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#linux-deb">Linux (Debian/Ubuntu)</a></li>
+    <li><a data-toggle="tab" href="#linux-rpm">Linux (RPM-based)</a></li>
+    <li><a data-toggle="tab" href="#macosx">Mac OS X</a></li>
+    <li><a data-toggle="tab" href="#windows">Windows</a></li>
+    <li><a data-toggle="tab" href="#manual">Manual</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="linux-deb">
+      <p>Installing sbt on Mac OS X with brew:</p>
+      <pre>brew install sbt</pre>
+    </div>
+    <div class="tab-pane" id="linux-rpm">
+      <p>Installing sbt on Ubuntu / Debian:</p>
+      <pre>
 echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
 sudo apt-get update
 sudo apt-get install sbt
-```
-
-### Installing sbt on RPM based Linux:
-
-```bash
+      </pre>
+    </div>
+    <div class="tab-pane" id="macosx">
+      <p>Installing sbt on RPM based Linux:</p>
+      <pre>
 curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo
 sudo yum install sbt
-```
+      </pre>
+    </div>
+    <div class="tab-pane" id="windows">
+      <p>Installing sbt on Windows:</p>
+      <ul>
+        <li>Download zip from sbt page and add sbt to %PATH% variable</li>
+        <li>`http://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Windows.html`</li>
+      </ul>
+    </div>
+    <div class="tab-pane" id="manual">
+      <p>Sbt manual installation:</p>
+      <p>http://www.scala-sbt.org/0.13/docs/Manual-Installation.html</p>
+    </div>
+  </div>
+</div>
 
-### Installing sbt on Windows:
+## Creating or Importing an Android Project
 
-Download zip from sbt page and add sbt to %PATH% variable
+There are two ways of working with sbt-android:
 
-`http://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Windows.html`
+1. Creating project with `gen-android` task
+2. Using `android gradle build` plugin which can import existing gradle project for you
 
-### Sbt manual installation
-
-`http://www.scala-sbt.org/0.13/docs/Manual-Installation.html`
-
-## Creating with gen-android
-
-* Install `sbt`
-
-* Add `android-sdk-plugin` to `sbt` global plugins:
-
-* For Mac OS X, Linux (if directory isn’t there, just create it):
-
-```bash
+<div class="nav-tabs-custom">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#create">Create a new project</a></li>
+    <li><a data-toggle="tab" href="#import">Import an existing project</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="create">
+      <ul>
+        <li>Install `sbt`</li>
+        <li>Add `android-sdk-plugin` to `sbt` global plugins:
+            For Mac OS X, Linux (if directory isn’t there, just create it):
+<pre>
 $ cd $HOME/.sbt/0.13/plugins/
 $ echo 'addSbtPlugin("com.hanhuy.sbt" % "android-sdk-plugin" % "1.5.13")' > android.sbt
-```
-
-* Create your project directory, I.e. myproject
-
-```bash
+</pre>
+        </li>
+        <li>Create your project directory, I.e. myproject
+<pre>
 $ mkdir myproject
-```
-
-* create new sbt project with sbt `gen-android` task
-
-```bash
+</pre>
+        </li>
+        <li>create new sbt project with sbt `gen-android` task
+<pre>
 $ sbt
 $ gen-android android-23 com.mypackage.test test
-```
-
-Project creation is finished, you can now import your project with intellij, eclipse. To simply run project you can invoke Android run task
-
-```bash
+</pre>
+        </li>
+        <li>Project creation is finished, you can now import your project with intellij, eclipse. To simply run project you can invoke Android run task
+<pre>
 $ android:run
-```
-
-## Building with android gradle build plugin
-`Gradle build plugin` lets you import settings from your current android gradle project. It generates `00-gradle-generated.sbt` from `build.gradle` file automatically.
-
-* Install sbt
-* Create `project` folder in project’s root directory
-```bash
-$mkdir project
-```
-* Add sbt plugin to plugins.sbt
-```bash
-$echo 'addSbtPlugin("com.hanhuy.sbt" % "android-gradle-build" % "1.1.11")' > project/plugins.sbt
-```
-
-* Enable Gradle build by adding this line to `build.scala`
-```bash
+</pre>
+        </li>
+      </ul>
+    </div>
+    <div class="tab-pane" id="import">
+      `Gradle build plugin` lets you import settings from your current android gradle project. It generates `00-gradle-generated.sbt` from `build.gradle` file automatically.
+      <ul>
+        <li>Install sbt</li>
+        <li>Create `project` folder in project’s root directory
+<pre>
+$ mkdir project
+</pre>
+        </li>
+        <li>Add sbt plugin to plugins.sbt
+<pre>
+$ echo 'addSbtPlugin("com.hanhuy.sbt" % "android-gradle-build" % "1.1.11")' > project/plugins.sbt
+</pre>
+        </li>
+        <li>Enable Gradle build by adding this line to `build.scala`
+<pre>
 $echo "object Build extends android.GradleBuild" > project/build.scala
-```
-* run sbt
-```bash
-$sbt
-```
-You can now run your project with `android:run` task
+</pre>
+        </li>
+        <li>Run sbt
+<pre>
+$ sbt
+</pre>
+        </li>
+      </ul>
+      You can now run your project with `android:run` task.
+    </div>
+  </div>
+</div>

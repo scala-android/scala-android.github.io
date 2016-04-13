@@ -1,6 +1,6 @@
 ---
 date: "2016-01-31T02:38:23+09:00"
-title: "Tips and tricks"
+title: "Tips and Tricks"
 layout: page
 permalink: /tips_and_tricks/
 ---
