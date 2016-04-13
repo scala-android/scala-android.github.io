@@ -2,7 +2,7 @@
 date: "2016-01-31T02:38:23+09:00"
 title: "Setting up enviroment"
 layout: page
-permalink: /setting_up_environment/
+permalink: /setup/
 ---
 
 

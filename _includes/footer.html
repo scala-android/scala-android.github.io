@@ -34,6 +34,8 @@ $(document).ready(function($) {
     $(".clickable-row").click(function() {
         window.document.location = $(this).data("href");
     });
+    $('.sidebar-menu a[href="' + this.location.pathname.replace(/\/$/, "") + '"]').parents('li,ul').addClass('active');
+    console.log(this.location.pathname);
 });
 </script>
 </script>

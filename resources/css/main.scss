@@ -41,13 +41,17 @@ h1:first-child {
 }
 
 .sidebar-menu > li > a {
-    padding: 12px 5px 12px 13px;
+  padding: 12px 5px 12px 13px;
 }
 
 .sidebar-menu > li > a > .fa {
   font-size: 130%;
   vertical-align: top;
   width: 30px;
+}
+
+.sidebar-menu > li.active > a {
+  background-color: #1a2226 !important;
 }
 
 .logo-lg {
