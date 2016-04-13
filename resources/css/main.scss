@@ -7,15 +7,28 @@
 
 // Our variables
 $base-font-family: Montserrat, sans-serif;
-$base-font-size:   16px;
+$base-font-size:   12px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 body {
   font-family: $base-font-family;
-  font-size: 12px;
+  font-size:   $base-font-size;
   font-weight: $base-font-weight;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $base-font-family;
+  font-weight: 300;
+}
+
+h1, h2, h3 { 
+  font-weight: 200;
+}
+
+h1:first-child {
+  margin-top: 0;
 }
 
 .main-header .logo {
@@ -25,6 +38,12 @@ body {
 
 .navbar-custom-menu > .navbar-nav > li > a {
   padding: 0;
+}
+
+.sidebar-menu > li > a > .fa {
+  font-size: 130%;
+  vertical-align: top;
+  width: 30px;
 }
 
 .logo-lg {

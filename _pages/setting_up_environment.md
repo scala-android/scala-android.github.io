@@ -11,18 +11,18 @@ There are two ways of working with android-sdk-plugin:
 1. Creating project with `gen-android` task
 2. Using `android gradle build` plugin which can import existing gradle project for you
 
-### Prerequisites
+## Prerequisites
 
 1. Java with `JAVA_HOME` variable must be installed.
 2. `ANDROID_HOME` variable must be set and pointing to your android sdk directory.
 3. Plugin also requires `sbt`.
 
-#### Installing sbt on Mac OS X with brew:
+### Installing sbt on Mac OS X with brew:
 ```bash
 $ brew install sbt
 ```
 
-#### Installing sbt on Ubuntu / Debian:
+### Installing sbt on Ubuntu / Debian:
 
 ```bash
 echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
@@ -31,24 +31,24 @@ sudo apt-get update
 sudo apt-get install sbt
 ```
 
-#### Installing sbt on RPM based Linux:
+### Installing sbt on RPM based Linux:
 
 ```bash
 curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo
 sudo yum install sbt
 ```
 
-#### Installing sbt on Windows:
+### Installing sbt on Windows:
 
 Download zip from sbt page and add sbt to %PATH% variable
 
 `http://www.scala-sbt.org/0.13/docs/Installing-sbt-on-Windows.html`
 
-#### Sbt manual installation
+### Sbt manual installation
 
 `http://www.scala-sbt.org/0.13/docs/Manual-Installation.html`
 
-### Creating with gen-android
+## Creating with gen-android
 
 * Install `sbt`
 
@@ -80,7 +80,7 @@ Project creation is finished, you can now import your project with intellij, ecl
 $ android:run
 ```
 
-### Building with android gradle build plugin
+## Building with android gradle build plugin
 `Gradle build plugin` lets you import settings from your current android gradle project. It generates `00-gradle-generated.sbt` from `build.gradle` file automatically.
 
 * Install sbt
