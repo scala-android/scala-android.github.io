@@ -1,9 +1,7 @@
 </div><!-- /.content-wrapper -->
 <footer class="main-footer">
-  <div class="pull-right hidden-xs">
-      All trademarks are the properties of their respective owners and are used for purposes of identification only.
-  </div>
-  <strong>scala-android.org</strong>
+  <div class="pull-right hidden-xs">All trademarks are the properties of their respective owners and are used for purposes of identification only.</div>
+  <span data-toggle="tooltip" data-placement="top" title="Criticism, ideas and bug reports welcome!"><a href="https://github.com/scala-android/scala-android.github.io/issues/new"><i class="fa fa-github"></i></a></span>
 </footer>
 
 <!-- Add the sidebar's background. This div must be placed
@@ -34,6 +32,7 @@ $(document).ready(function($) {
     $(".clickable-row").click(function() {
         window.document.location = $(this).data("href");
     });
+    /* Mark current page as active in the sidebar. */
     $('.sidebar-menu a[href="' + this.location.pathname.replace(/\/$/, "") + '"]').parents('li,ul').addClass('active');
     console.log(this.location.pathname);
 });

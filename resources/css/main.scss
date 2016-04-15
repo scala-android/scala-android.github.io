@@ -11,13 +11,13 @@ $heading-font-size:   13px;
 $heading-font-weight: 300;
 
 $base-font-family: Roboto, sans-serif;
-$base-font-size:   13px;
+$base-font-size:   14px;
 $base-font-weight: 400;
 
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
-body {
+.content-wrapper {
   font-family: $base-font-family;
   font-size:   $base-font-size;
   font-weight: $base-font-weight;
@@ -38,6 +38,7 @@ h1:first-child {
 
 .sidebar, .success, .intro-text {
   font-family: $heading-font-family;
+  font-size:   $heading-font-size;
   font-weight: $heading-font-weight;
 }
 
@@ -93,4 +94,18 @@ b, strong {
 
 .nav-tabs-custom > .nav-tabs > li > a:hover {
   color: #444;
+}
+
+.main-footer {
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.main-footer > .pull-right {
+  padding-top: 4px;
+}
+
+.main-footer .fa {
+  font-size: 180%;
 }
