@@ -11,7 +11,6 @@ How to quick start from app (short version of setting up env)
 ### Creating with gen-android
 
 * Install `sbt`
-
 * Invoke bash script in console:
 
 <pre>bash
