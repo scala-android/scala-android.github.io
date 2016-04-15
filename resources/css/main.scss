@@ -6,9 +6,14 @@
 @import 'fonts';
 
 // Our variables
-$base-font-family: Montserrat, sans-serif;
+$heading-font-family: Montserrat, sans-serif;
+$heading-font-size:   13px;
+$heading-font-weight: 300;
+
+$base-font-family: Roboto, sans-serif;
 $base-font-size:   13px;
-$base-font-weight: 300;
+$base-font-weight: 400;
+
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -19,7 +24,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: $base-font-family;
+  font-family: $heading-font-family;
   font-weight: 300;
 }
 
@@ -31,8 +36,13 @@ h1:first-child {
   margin-top: 0;
 }
 
+.sidebar, .success, .intro-text {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+}
+
 .main-header .logo {
-  font-family: $base-font-family;
+  font-family: $heading-font-family;
   padding: 0 10px;
 }
 
