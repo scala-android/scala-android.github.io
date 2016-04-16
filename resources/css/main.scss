@@ -42,9 +42,14 @@ h1:first-child {
   font-weight: $heading-font-weight;
 }
 
-.main-header .logo {
+.main-header > .logo {
   font-family: $heading-font-family;
   padding: 0 10px;
+}
+
+.main-header > .logo img {
+  height: 35.5px;
+  margin-top: -4px;
 }
 
 .navbar-custom-menu > .navbar-nav > li > a {
@@ -71,6 +76,7 @@ h1:first-child {
 
 .sidebar-logo {
   margin-right: 5px;
+  margin-left: -3px;
 }
 
 b, strong {
