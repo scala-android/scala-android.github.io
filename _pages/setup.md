@@ -21,10 +21,6 @@ permalink: /setup/
   </ul>
   <div class="tab-content">
     <div class="tab-pane active" id="linux-deb">
-      <p>Installing sbt on Mac OS X with brew:</p>
-      <pre>brew install sbt</pre>
-    </div>
-    <div class="tab-pane" id="linux-rpm">
       <p>Installing sbt on Ubuntu / Debian:</p>
       <pre>
 echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
@@ -33,12 +29,16 @@ sudo apt-get update
 sudo apt-get install sbt
       </pre>
     </div>
-    <div class="tab-pane" id="macosx">
+    <div class="tab-pane" id="linux-rpm">
       <p>Installing sbt on RPM based Linux:</p>
       <pre>
 curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo
 sudo yum install sbt
       </pre>
+    </div>
+    <div class="tab-pane" id="macosx">
+      <p>Installing sbt on Mac OS X with brew:</p>
+      <pre>brew install sbt</pre>
     </div>
     <div class="tab-pane" id="windows">
       <p>Installing sbt on Windows:</p>
