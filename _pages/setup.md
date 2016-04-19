@@ -26,15 +26,13 @@ permalink: /setup/
 echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
 sudo apt-get update
-sudo apt-get install sbt
-      </pre>
+sudo apt-get install sbt</pre>
     </div>
     <div class="tab-pane" id="linux-rpm">
       <p>Installing sbt on RPM based Linux:</p>
       <pre>
 curl https://bintray.com/sbt/rpm/rpm | sudo tee /etc/yum.repos.d/bintray-sbt-rpm.repo
-sudo yum install sbt
-      </pre>
+sudo yum install sbt</pre>
     </div>
     <div class="tab-pane" id="macosx">
       <p>Installing sbt on Mac OS X with brew:</p>
