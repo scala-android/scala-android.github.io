@@ -38,10 +38,14 @@ h1:first-child {
   margin-top: 0;
 }
 
-.sidebar, .success, .intro-text {
+.sidebar, .sidebar-menu .treeview-menu > li > a, .success, .intro-text {
   font-family: $heading-font-family;
   font-size:   $heading-font-size;
   font-weight: $heading-font-weight;
+}
+
+.sidebar-menu .treeview-menu > li > a {
+  padding: 5px 5px 5px 44px;
 }
 
 .main-header > .logo {
@@ -66,6 +70,10 @@ h1:first-child {
   font-size: 130%;
   vertical-align: top;
   width: 30px;
+}
+
+.sidebar-menu li > a > .fa-angle-left {
+  width: auto;
 }
 
 .sidebar-menu > li.active > a {
@@ -116,4 +124,20 @@ b, strong {
 
 .main-footer .fa {
   font-size: 180%;
+}
+
+xmp {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: auto;
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
