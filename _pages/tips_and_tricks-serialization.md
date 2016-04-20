@@ -7,7 +7,8 @@ permalink: /tips_and_tricks-serialization/
 
 You are discouraged to use Java serialization on the Android platform for performance reasons. Instead, Android comes with its own serialization tool: <code>Parcelable</code>. A <code>Parcelable</code> class requires you to implement the <code>Parcelable</code> interface and also to fulfill a certain contract as shown below:
 
-<pre>import android.os.Parcel;
+{% highlight java %}
+import android.os.Parcel;
 import android.os.Parcelable;
 
 public class User implements Parcelable {
@@ -35,20 +36,21 @@ public class User implements Parcelable {
         destination.writeString(name);
     }
 
-    // Implemented by contract, if this field is not around you will encounter runtime
-    // exceptions
-    public static final Parcelable.Creator&lt;User> CREATOR = new Parcelable.Creator&lt;User>() {
+    // Implemented by contract, if this field is not around you will encounter runtime exceptions
+    public static final Parcelable.Creator<User> CREATOR = new Parcelable.Creator<User>() {
         public User createFromParcel(Parcel source) { return new User(source); }
 
         public User[] newArray(int size) { return new User[size]; }
     };
-}</pre>
+}
+{% endhighlight %}
 
 A <code>Parcelable</code> class forces you to implement a lot of boilerplate code, but offers great performance as it does not rely on runtime reflection like the default Java serialization framework. When it comes to Scala on Android there emerges another problem: the <code>Parcelable</code> contract requires a static class field. At first glance this seems to be an issue in Scala as there is no support for static members.
 
 Luckily, the Scala compiler checks for Android's <code>Parcelable</code> interface and treats it in a special way to support Android development. At the end of the day there is just another contract to implement that relies on the class' companion to overcome the lack of statics. Below is a valid Scala implementation of the previous example.
 
-<pre>import android.os.{ Parcel, Parcelable }
+{% highlight scala %}
+import android.os.{ Parcel, Parcelable }
 
 case class User( age: Int, name: String ) extends Parcelable {
   protected this(source: Parcel) = this(source.readInt(), source.readString())
@@ -68,4 +70,5 @@ object User {
     override def createFromParcel(source: Parcel) = new User(source)
     override def newArray(size: Int) = new Array[User](size)
   }
-}</pre>
+}
+{% endhighlight %}

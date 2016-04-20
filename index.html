@@ -107,18 +107,37 @@ header .intro-text .skills {
 .logos {
   display: inline-flex;
   align-items: center;
+  box-sizing: content-box;
 }
 
 .scala-logo {
-  padding-right: 20px;
+  height: 250px;
+  padding-right: 50px;
+  padding-left: 80px;
+}
+
+.plus-icon {
+  font-size: 160px;
 }
 
 .android-logo {
+  height: 260px;
+  margin-left: 50px;
   padding-left: 50px;
+  padding-right: 50px;
 }
 
-.large-plus {
-  font-size: 160px;
+.equals-logo {
+   width: 125px;
+   height: 125px;
+   padding-top: 5px;
+}
+
+.heart-icon {
+  font-size: 280px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  color: rgba(250,184,66, 1);
 }
 
 </style>
@@ -128,15 +147,17 @@ header .intro-text .skills {
   <div class="container">
     <div class="row">
       <div class="col-lg-12 logos">
-        <img class="img-responsive scala-logo" src="{{site.baseurl}}/resources/img/scala-spiral-white.svg" alt="Scala on Android" style="width: 300px; height: 300px;">
-        <span><i class="fa fa-plus large-plus"></i></span>
-        <img class="img-responsive android-logo" src="{{site.baseurl}}/resources/img/android.svg" alt="Scala on Android" style="width: 300px; height: 300px;">
+        <img class="img-responsive scala-logo" src="{{site.baseurl}}/resources/img/scala.svg" alt="Scala on Android">
+        <span><i class="fa fa-plus plus-icon"></i></span>
+        <img class="img-responsive android-logo" src="{{site.baseurl}}/resources/img/android.svg" alt="Scala on Android">
+        <img class="img-responsive equals-logo" src="{{site.baseurl}}/resources/img/equals.svg" alt="Scala on Android">
+        <span><i class="fa fa-heart heart-icon"></i></span>
       </div>
       <div class="col-lg-12">
         <div class="intro-text">
           <span class="name">Scala on Android</span>
           <hr class="star-light">
-          <span class="skills"><b>Scala + Android = <i class="fa fa-heart"></i></b></span>
+          <span class="skills"><b>Write Android apps in Scala!</b></span>
         </div>
       </div>
     </div>

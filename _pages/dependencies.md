@@ -11,13 +11,15 @@ _sbt_ and _sbt-android_ offer a wide range of possibilities to include external 
 
 The preferred way to add dependencies are _managed dependencies_. They are easy to maintain and offer fine-grained control of the dependencies. Library dependencies are maintained via the _sbt_ configuration key <code>libraryDependencies</code>. The [_sbt_ documentation](http://www.scala-sbt.org/0.13/docs/Library-Dependencies.html) provides more detailed information on managing dependencies.
 
-<pre>libraryDependencies ++= Seq(
+{% highlight scala %}
+libraryDependencies ++= Seq(
   "com.android.support" % "appcompat-v7"    % "23.1.0",
   "com.android.support" % "cardview-v7"     % "23.1.0",
   "com.android.support" % "design"          % "23.1.0",
   "com.android.support" % "gridlayout-v7"   % "23.1.0",
   "com.android.support" % "recyclerview-v7" % "23.1.0",
-  "com.android.support" % "support-v4"      % "23.1.0")</pre>
+  "com.android.support" % "support-v4"      % "23.1.0")
+{% endhighlight %}
 
 Besides simple Scala or Java libraries, you can also reference Android _aar_ or _apklib_ packages. Usually, the _sbt-android_ plugin is able to detect and handle these dependencies correctly, but in some cases it might be necessary to mark them explicitly with <code>aar()</code> or <code>apklib()</code> (e.g. <code>aar( "com.android.support" % "appcompat-v7" % "23.1.0" )</code>).
 

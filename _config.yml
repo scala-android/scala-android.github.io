@@ -1,23 +1,15 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title: Scala on android
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  Easy-to-use Scala plugin for using existing and newly created android projects. It is tested and developed against sbt >= 0.13.6.
-  100% compatible with Google's own Gradle build system due to the use of the same underlying com.android.tools.build:builder implementation.
-
-baseurl: "" # the subpath of your site, e.g. /blog
+  Scala on Android – Develop Android projects in Scala!
+baseurl: ""
 url: "http://127.0.0.1:4000" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 exclude: [.bundle-vendor]
 include: ['_pages']
