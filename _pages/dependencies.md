@@ -1,8 +1,8 @@
 ---
 date: "2016-04-13T07:35:43+02:00"
-title: "Libraries"
+title: "Dependencies"
 layout: page
-permalink: /libraries/
+permalink: /dependencies/
 ---
 
 _sbt_ and _sbt-android_ offer a wide range of possibilities to include external code into your project. Besides pulling library as managed dependencies from the web and dumping <code>*.jar</code> files to a <code>libs/</code> folder, you can also create _sbt_ sub-projects or reference code from a Git repository.
