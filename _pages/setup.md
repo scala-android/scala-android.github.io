@@ -68,7 +68,7 @@ There are two ways of working with sbt-android:
     <div class="tab-pane active" id="create">
       <ul>
         <li>Install `sbt`</li>
-        <li>Add `android-sdk-plugin` to `sbt` global plugins:
+        <li>Add `sbt-android` to _sbt_'s global plugins:
             For Mac OS X, Linux (if directory isn’t there, just create it):
 <pre>
 $ cd $HOME/.sbt/0.13/plugins/
@@ -104,7 +104,7 @@ $ mkdir project
         </li>
         <li>Add sbt plugin to plugins.sbt
 <pre>
-$ echo 'addSbtPlugin("com.hanhuy.sbt" % "android-gradle-build" % "1.1.11")' > project/plugins.sbt
+$ echo 'addSbtPlugin("org.scala-android" % "sbt-android-gradle" % "1.2.0")' > project/plugins.sbt
 </pre>
         </li>
         <li>Enable Gradle build by adding this line to `build.scala`
