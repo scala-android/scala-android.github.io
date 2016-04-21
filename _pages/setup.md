@@ -72,7 +72,7 @@ There are two ways of working with sbt-android:
             For Mac OS X, Linux (if directory isn’t there, just create it):
 <pre>
 $ cd $HOME/.sbt/0.13/plugins/
-$ echo 'addSbtPlugin("com.hanhuy.sbt" % "android-sdk-plugin" % "1.5.13")' > android.sbt
+$ echo 'addSbtPlugin("org.scala-android" % "sbt-android" % "1.6.0")' > android.sbt
 </pre>
         </li>
         <li>Create your project directory, I.e. myproject
