@@ -12,4 +12,4 @@ github_username:  jekyll
 markdown: kramdown
 highlighter: rouge
 exclude: [.bundle-vendor]
-include: ['_pages']
+include: ['_pages', '_pages/releases']
