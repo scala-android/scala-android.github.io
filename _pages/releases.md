@@ -18,7 +18,7 @@ permalink: /releases/
 
       <div class="table-responsive mailbox-messages">
 
-          <table class="table table-hover table-striped">
+          <table class="table table-hover table-striped" onmouseover="cursor: hand ">
 
             <tbody>
               <tr>
@@ -28,7 +28,7 @@ permalink: /releases/
               {% assign pages = site.pages | sort: 'date' | reverse %}
               {% for page in pages %}
                 {% if page.resource == true %}
-                 <tr class="mailbox-subject clickable-row"  data-href='{{ page.url }}'>
+                 <tr class="mailbox-subject clickable-row" style="cursor: pointer;"  data-href='{{ page.url }}'>
                       <td> {{ page.title }} </td>
                       <td>{{ page.date | date: "%Y-%m-%d" }} </td>
                  </tr>

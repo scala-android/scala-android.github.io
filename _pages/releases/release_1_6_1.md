@@ -1,5 +1,5 @@
 ---
-date: "2016-05-13T10:07:35+02:00"
+date: "2016-05-05T10:07:35+02:00"
 title: "Release 1.6.1"
 layout: page
 permalink: /releases/1_6_1/
