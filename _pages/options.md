@@ -96,8 +96,8 @@ permalink: /options/
     		<td>Fork process for testing</td>
     	</tr>
     	<tr>
-    		<td></td>
-    		<td><code>publishArtifact in (Compile, packageDoc)</code></td>
+    		<td>packagingOptions</td>
+    		<td><code>packagingOptions in Android := PackagingOptions(excludes = Seq(&quot;META-INF/LICENSE.txt&quot;))</code></td>
     		<td>packagingOptions</td>
     		<td><code>packagingOptions {        exclude 'META-INF/LICENSE.txt'    }</code></td>
     		<td>Packaging options, i.e. excluding META-INF files</td>
