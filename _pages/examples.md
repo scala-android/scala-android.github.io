@@ -8,7 +8,7 @@ permalink: /examples/
 ### Project integration test project
 
 If you're stuck with configuration, `jni` integration, multiproject build. Please
-check sbt plugin's examples. Plugin is well tested and it's good source of information.
+check [sbt plugin's examples](https://github.com/scala-android/sbt-android/tree/master/sbt-test/android-sdk-plugin). Plugin is well tested and it's good source of information.
 
 ### 3rd party examples
 
