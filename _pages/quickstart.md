@@ -22,13 +22,13 @@ Scala's Android support requires adding _sbt-android_ as a plugin for _sbt_ (Sca
 2. Create a file called <code>build.sbt</code> (if it doesn't exist) inside your <code>my-example-project/</code> directory and add the line <code>androidBuild</code> to that file.
 3. Create a directory called <code>project/</code> (or enter that directory if it exists).<br/>
 4. Create another file called <code>build.sbt</code> (if it doesn't exist) inside your <code>my-example-project/project/</code> directory.
-5. Add the line <code>addSbtPlugin("org.scala-android" % "sbt-android" % "1.6.10")</code> to that file.
+5. Add the line <code>addSbtPlugin("org.scala-android" % "sbt-android" % "1.6.14")</code> to that file.
 
 ## 3. Create an Android Project
 
 1. Run _sbt_.
 2. Inside the sbt shell, execute<br/>
-   <code>gen-android android-23 com.mypackage.test test</code><br/>
+   <code>gen-android com.mypackage.test test</code><br/>
    to create an Android project called _test_ which uses version 23 of the Android SDK.
 
 ## 4. Run Your Android Application
