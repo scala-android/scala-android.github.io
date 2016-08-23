@@ -72,7 +72,7 @@ There are two ways of working with sbt-android:
             For Mac OS X, Linux (if directory isn’t there, just create it):
 <pre>
 $ cd $HOME/.sbt/0.13/plugins/
-$ echo 'addSbtPlugin("org.scala-android" % "sbt-android" % "1.6.10")' > android.sbt
+$ echo 'addSbtPlugin("org.scala-android" % "sbt-android" % "1.6.14")' > android.sbt
 </pre>
         </li>
         <li>Create your project directory, I.e. myproject
@@ -83,7 +83,7 @@ $ mkdir myproject
         <li>create new sbt project with sbt `gen-android` task
 <pre>
 $ sbt
-$ gen-android android-23 com.mypackage.test test
+$ gen-android com.mypackage.test test
 </pre>
         </li>
         <li>Project creation is finished, you can now import your project with intellij, eclipse. To simply run project you can invoke Android run task
