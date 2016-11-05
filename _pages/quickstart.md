@@ -19,7 +19,7 @@ _sbt_, the Scala build tool, is required. Follow the instructions on the [_sbt_ 
 Scala's Android support requires adding _sbt-android_ as a plugin for _sbt_ (Scala's build tool) to your project configuration. To do that:
 
 1. Assuming that your project is called _my-example-project_, create a directory named <code>my-example-project/</code> and enter it.
-2. Create a file called <code>build.sbt</code> (if it doesn't exist) inside your <code>my-example-project/</code> directory and add the line <code>androidBuild</code> to that file.
+2. Create a file called <code>build.sbt</code> (if it doesn't exist) inside your <code>my-example-project/</code> directory and add the lines <code>androidBuild</code> and <code>scalaVersion := "2.11.8"</code>to that file. (Scala on Android currently requires Scala 2.11.)
 3. Create a directory called <code>project/</code> (or enter that directory if it exists).<br/>
 4. Create another file called <code>build.sbt</code> (if it doesn't exist) inside your <code>my-example-project/project/</code> directory.
 5. Add the line <code>addSbtPlugin("org.scala-android" % "sbt-android" % "1.7.0")</code> to that file.
