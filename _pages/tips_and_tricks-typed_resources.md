@@ -53,10 +53,10 @@ class MyActivity extends Activity {
 }
 {% endhighlight %}
 
-But thanks to <code>TR</code> you can get rid off the cast and therefore simplify the code and improve type safety at the same time:
+But thanks to <code>TR</code> you can get rid of the cast and therefore simplify the code and improve type safety at the same time:
 
 {% highlight scala %}
-class MyActivity extends Activity with TypedActivity {
+class MyActivity extends Activity with TypedFindView {
   override def onCreate(savedInstanceState: Bundle) = {
     super.onCreate(savedInstanceState)
 
