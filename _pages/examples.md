@@ -14,7 +14,7 @@ check [sbt plugin's examples](https://github.com/scala-android/sbt-android/tree/
 
 There are some other examples done by other plugin users. You might look at `47deg` projects like:
 
-* Tranlation bubble [https://github.com/47deg/translate-bubble-android](https://github.com/47deg/translate-bubble-android)
+* Translation bubble [https://github.com/47deg/translate-bubble-android](https://github.com/47deg/translate-bubble-android)
 * Scala days Android application [https://github.com/47deg/scala-days-android](https://github.com/47deg/scala-days-android)
 * Scala Android API demos [https://github.com/47deg/scala-android](https://github.com/47deg/scala-android)
 
